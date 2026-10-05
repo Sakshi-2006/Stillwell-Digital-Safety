@@ -1,0 +1,2491 @@
+Project Title
+
+Social Media Privacy Risk Assessment Framework
+
+Objective
+
+Build a tool that ingests social media profile data (exported JSON/CSV or API proxy), detects privacy risks (PII exposure, geo leaks, facial/child photos, metadata trails, weak settings), scores accounts, and generates actionable remediation steps plus a clear awareness dashboard.
+
+Industry Relevance
+
+Hiring teams, schools, and enterprises increasingly evaluate online footprints for safety and compliance; regulators emphasize data minimization and consent. A structured privacy risk scan + coaching helps students, job-seekers, and SMBs reduce doxxing, impersonation, and social-engineering exposure.
+Prompt 
+You are an expert Cybersecurity Engineer, Privacy Analyst, SOC Analyst,
+Digital Privacy Specialist, OSINT Risk Awareness Specialist, Application
+Security Analyst, Python Developer, Security Awareness Trainer, Data Analyst,
+and GitHub Mentor.
+
+Your task is to help me build a COMPLETE industry-oriented Cybersecurity project titled:
+
+“Social Media Privacy Risk Assessment Framework”
+
+IMPORTANT CONTEXT:
+
+- I am a student.
+- This is a CYBERSECURITY course project.
+- I want strong GitHub and LinkedIn proof of work.
+- I am a beginner, so explain everything step-by-step.
+- This must be a DEFENSIVE privacy and cybersecurity project.
+- Do NOT scrape real social-media profiles.
+- Do NOT collect private information about real people.
+- Do NOT attempt to bypass privacy settings.
+- Do NOT perform account enumeration.
+- Do NOT identify, profile, or track real individuals.
+- Do NOT access private accounts.
+- Use synthetic fictional profiles and voluntarily entered demo data only.
+- The application should evaluate privacy configuration and exposure categories, not spy on users.
+
+PROJECT OBJECTIVE:
+
+Build a privacy-risk assessment platform where a user answers questions about
+their social-media behavior and privacy settings.
+
+The framework should evaluate areas such as:
+
+1. Profile visibility
+2. Personal-information exposure
+3. Contact-information exposure
+4. Location exposure
+5. Workplace/education exposure
+6. Birthday exposure
+7. Family/relationship information
+8. Post visibility
+9. Friend/follower controls
+10. Tagging permissions
+11. Third-party application access
+12. Account authentication
+13. MFA usage
+14. Password reuse awareness
+15. Login alerts
+16. Unknown connection requests
+17. Suspicious links/messages
+18. Photo metadata awareness
+19. Historical posts
+20. Social-engineering exposure
+
+The application should generate:
+
+- Privacy Risk Score: 0–100
+- Risk Level
+- Category-wise scores
+- Detected privacy weaknesses
+- Personalized security recommendations
+- Privacy checklist
+- Security-awareness guidance
+- Optional privacy report
+- Aggregate dashboard using synthetic/demo data
+
+Risk Levels:
+
+LOW
+MODERATE
+HIGH
+CRITICAL
+
+IMPORTANT:
+
+A high privacy-risk score should mean HIGHER EXPOSURE/RISK.
+
+Example:
+
+0–20 = LOW
+21–40 = MODERATE
+41–70 = HIGH
+71–100 = CRITICAL
+
+Clearly explain that this is an educational risk framework, not a guarantee
+that an account will or will not be compromised.
+
+==================================================
+1. PROJECT EXPLANATION
+==================================================
+
+Explain:
+
+- What is social-media privacy?
+- What is a digital footprint?
+- What is personal-information exposure?
+- What is oversharing?
+- What is social engineering?
+- What is identity-related risk?
+- Why location exposure can create privacy risk
+- Why public profiles can increase exposure
+- Why historical posts matter
+- Why privacy settings should be reviewed regularly
+- How MFA helps account security
+- Difference between privacy and security
+
+Give:
+
+A. Simple Explanation
+
+B. Technical Explanation
+
+Explain workflow:
+
+User
+↓
+Privacy Questionnaire
+↓
+Input Validation
+↓
+Privacy Feature Extraction
+↓
+Category Risk Analysis
+↓
+Risk Scoring Engine
+↓
+Overall Privacy Risk Score
+↓
+Risk Classification
+↓
+Personalized Recommendations
+↓
+Privacy Dashboard
+↓
+Privacy Assessment Report
+
+==================================================
+2. INDUSTRY RELEVANCE
+==================================================
+
+Explain relevance to:
+
+- Cybersecurity
+- Privacy engineering
+- Security awareness
+- Enterprise security
+- Digital-risk management
+- Identity protection
+- Security consulting
+- Application security
+- Governance, Risk & Compliance
+- Employee cybersecurity training
+
+Explain relevant job roles:
+
+Cybersecurity Analyst
+
+Privacy Analyst
+
+GRC Analyst
+
+SOC Analyst
+
+Security Consultant
+
+IAM Analyst
+
+Security Awareness Specialist
+
+Privacy Engineer
+
+Explain how this project demonstrates relevant skills.
+
+==================================================
+3. PRIVACY VS SECURITY
+==================================================
+
+Explain:
+
+PRIVACY:
+Controls how personal information is collected, shared, exposed, and used.
+
+SECURITY:
+Protects systems, accounts, and information from unauthorized access or misuse.
+
+Example:
+
+A social-media account may have a strong password but still expose too much
+personal information publicly.
+
+Therefore:
+
+Strong Account Security ≠ Strong Privacy
+
+Create examples.
+
+==================================================
+4. PRIVACY ASSESSMENT QUESTIONNAIRE
+==================================================
+
+Create a professional questionnaire with at least 40 questions.
+
+Divide into categories:
+
+CATEGORY A:
+Profile Visibility
+
+CATEGORY B:
+Personal Information
+
+CATEGORY C:
+Location Privacy
+
+CATEGORY D:
+Posts & Content
+
+CATEGORY E:
+Friends / Followers
+
+CATEGORY F:
+Tagging & Mentions
+
+CATEGORY G:
+Authentication & Account Security
+
+CATEGORY H:
+Third-Party Apps
+
+CATEGORY I:
+Messaging & Social Engineering
+
+CATEGORY J:
+Digital Footprint
+
+Use answers such as:
+
+YES
+NO
+SOMETIMES
+NOT SURE
+
+or:
+
+PUBLIC
+FRIENDS
+PRIVATE
+
+Example questions:
+
+“Is your profile publicly visible?”
+
+“Is your phone number visible?”
+
+“Is your personal email publicly visible?”
+
+“Is your full birth date visible?”
+
+“Do you publicly share your current location?”
+
+“Do you post travel plans before or during a trip?”
+
+“Can anyone tag you without approval?”
+
+“Do you accept connection requests from unknown people?”
+
+“Do you use multi-factor authentication?”
+
+“Do you review connected third-party applications?”
+
+“Do you regularly review old public posts?”
+
+Create complete questionnaire.
+
+==================================================
+5. SYNTHETIC PROFILE DATASET
+==================================================
+
+Generate at least 1,000 fictional privacy-assessment records.
+
+Columns may include:
+
+profile_id
+profile_visibility
+phone_public
+email_public
+birthday_public
+location_public
+workplace_public
+education_public
+relationship_public
+posts_public
+location_tagging
+travel_posts
+unknown_connections
+tag_review_enabled
+third_party_apps_reviewed
+mfa_enabled
+login_alerts_enabled
+password_reuse_reported
+suspicious_link_awareness
+old_posts_reviewed
+privacy_settings_reviewed
+risk_score
+risk_level
+
+Generate only synthetic data.
+
+Save:
+
+data/social_media_privacy_assessments.csv
+
+Provide complete Python generator.
+
+==================================================
+6. PRIVACY FEATURE ENGINEERING
+==================================================
+
+Create:
+
+extract_privacy_features()
+
+Convert questionnaire responses into numerical privacy-risk features.
+
+Example:
+
+Public phone number:
+High exposure contribution
+
+Public email:
+Exposure contribution
+
+Full birthday:
+Exposure contribution
+
+Public location:
+High exposure contribution
+
+MFA disabled:
+Account-security risk contribution
+
+Unknown connections accepted:
+Social-engineering risk contribution
+
+No tag review:
+Content/privacy contribution
+
+Third-party apps never reviewed:
+Application-access risk contribution
+
+Return structured feature dictionary.
+
+==================================================
+7. CATEGORY-WISE PRIVACY SCORING
+==================================================
+
+Create separate scores:
+
+PROFILE EXPOSURE SCORE
+
+PERSONAL INFORMATION SCORE
+
+LOCATION EXPOSURE SCORE
+
+CONTENT EXPOSURE SCORE
+
+CONNECTION RISK SCORE
+
+TAGGING RISK SCORE
+
+ACCOUNT SECURITY SCORE
+
+THIRD-PARTY APP RISK SCORE
+
+SOCIAL ENGINEERING SCORE
+
+DIGITAL FOOTPRINT SCORE
+
+Each:
+
+0–100
+
+Where:
+
+0 = lower assessed risk
+
+100 = higher assessed risk
+
+Then calculate overall risk using configurable weights.
+
+==================================================
+8. PRIVACY RISK SCORING ENGINE
+==================================================
+
+Create:
+
+calculate_privacy_risk()
+
+Example weighting:
+
+Profile Visibility:
+10%
+
+Personal Information:
+15%
+
+Location Privacy:
+15%
+
+Posts & Content:
+10%
+
+Connections:
+10%
+
+Tagging:
+5%
+
+Account Security:
+15%
+
+Third-Party Apps:
+5%
+
+Social Engineering:
+10%
+
+Digital Footprint:
+5%
+
+Total:
+100%
+
+Allow configuration.
+
+Overall:
+
+0–20:
+LOW
+
+21–40:
+MODERATE
+
+41–70:
+HIGH
+
+71–100:
+CRITICAL
+
+IMPORTANT:
+
+Explain that weights and thresholds are educational assumptions that should be
+validated before any professional risk decision.
+
+==================================================
+9. PROFILE VISIBILITY ANALYSIS
+==================================================
+
+Analyze:
+
+PUBLIC
+FRIENDS-ONLY
+PRIVATE
+
+Also consider:
+
+Search-engine visibility
+
+Follower visibility
+
+Friends-list visibility
+
+Profile discoverability
+
+Explain why visibility itself is not automatically unsafe but increases the
+amount of information potentially accessible.
+
+==================================================
+10. PERSONAL INFORMATION EXPOSURE
+==================================================
+
+Analyze whether the user reports publicly exposing:
+
+Phone number
+
+Personal email
+
+Full birth date
+
+Home-related information
+
+Workplace
+
+Education
+
+Relationship/family details
+
+IMPORTANT:
+
+Do not ask users to type their actual phone number, address, birth date, etc.
+
+Ask only:
+
+“Is this information publicly visible?”
+
+YES / NO
+
+This allows privacy assessment without collecting the sensitive information itself.
+
+==================================================
+11. LOCATION PRIVACY ANALYSIS
+==================================================
+
+Analyze:
+
+Real-time location sharing
+
+Geotagging
+
+Check-ins
+
+Home location exposure
+
+Work location exposure
+
+Travel plans
+
+Vacation posts
+
+Frequent location patterns
+
+Explain:
+
+Why posting a photo after leaving a location can sometimes reduce immediate
+exposure compared with broadcasting a real-time location.
+
+Do not perform geolocation tracking.
+
+==================================================
+12. PHOTO & METADATA AWARENESS
+==================================================
+
+Explain:
+
+Photos can unintentionally reveal:
+
+Location context
+
+Workplace
+
+School
+
+Vehicle information
+
+Badges
+
+Documents
+
+Computer screens
+
+Family information
+
+Travel information
+
+Explain EXIF metadata conceptually.
+
+Optional:
+
+Build a SAFE local metadata viewer for images voluntarily uploaded by the user.
+
+It should:
+
+- read metadata locally
+- display available metadata
+- not upload the image externally
+- not infer hidden location beyond metadata explicitly present
+- allow metadata removal from a copy
+
+Explain privacy implications.
+
+==================================================
+13. SOCIAL ENGINEERING RISK
+==================================================
+
+Evaluate behaviors such as:
+
+Accepting unknown connections
+
+Responding to suspicious DMs
+
+Clicking unexpected links
+
+Sharing verification codes
+
+Sharing personal information through messages
+
+Trusting impersonated accounts
+
+Participating in suspicious giveaways
+
+Explain how publicly available personal information can sometimes make
+social-engineering messages more convincing.
+
+Do NOT create social-engineering attack scripts.
+
+==================================================
+14. ACCOUNT SECURITY ASSESSMENT
+==================================================
+
+Evaluate:
+
+MFA enabled?
+
+Unique password?
+
+Password manager used?
+
+Login alerts enabled?
+
+Recovery information reviewed?
+
+Active sessions reviewed?
+
+Unknown devices checked?
+
+Explain:
+
+Privacy risk and account-security risk overlap but are not identical.
+
+==================================================
+15. THIRD-PARTY APPLICATION RISK
+==================================================
+
+Assess:
+
+Connected applications
+
+Unused applications
+
+Unnecessary permissions
+
+Old integrations
+
+“Sign in with social account” connections
+
+Explain:
+
+Principle of Least Privilege
+
+Recommend:
+
+Regularly review and revoke unnecessary application access.
+
+==================================================
+16. TAGGING & MENTION PRIVACY
+==================================================
+
+Analyze:
+
+Can anyone tag user?
+
+Is tag review enabled?
+
+Can tagged posts appear automatically?
+
+Can unknown users mention account?
+
+Explain how another person's post can expose information even when the user
+personally posts very little.
+
+==================================================
+17. DIGITAL FOOTPRINT ANALYSIS
+==================================================
+
+Explain:
+
+ACTIVE DIGITAL FOOTPRINT:
+Information deliberately shared.
+
+PASSIVE DIGITAL FOOTPRINT:
+Information generated/collected through online activity depending on service context.
+
+For the project, evaluate only self-reported privacy practices.
+
+Analyze:
+
+Old posts
+
+Old accounts
+
+Public comments
+
+Profile history
+
+Unused accounts
+
+Past public content
+
+Recommend periodic privacy review.
+
+==================================================
+18. RISK FINDINGS ENGINE
+==================================================
+
+Create:
+
+generate_privacy_findings()
+
+Example output:
+
+OVERALL PRIVACY RISK:
+68/100
+
+LEVEL:
+HIGH
+
+TOP RISKS:
+
+1. Phone number reported as publicly visible
+2. Real-time location sharing enabled
+3. MFA disabled
+4. Unknown connection requests frequently accepted
+5. Tag review disabled
+
+CATEGORY SCORES:
+
+Personal Information:
+80/100
+
+Location:
+90/100
+
+Account Security:
+65/100
+
+Social Engineering:
+70/100
+
+Digital Footprint:
+45/100
+
+==================================================
+19. SECURITY RECOMMENDATION ENGINE
+==================================================
+
+Create:
+
+generate_recommendations()
+
+Recommendations should be personalized.
+
+Example:
+
+RISK:
+Phone number publicly visible.
+
+RECOMMENDATION:
+Limit phone-number visibility where possible.
+
+RISK:
+MFA disabled.
+
+RECOMMENDATION:
+Enable multi-factor authentication using the strongest supported method available.
+
+RISK:
+Real-time location sharing.
+
+RECOMMENDATION:
+Avoid publicly broadcasting real-time location unless intentionally needed.
+
+RISK:
+Unknown connection requests.
+
+RECOMMENDATION:
+Verify unfamiliar profiles before accepting connections.
+
+Prioritize recommendations:
+
+IMMEDIATE
+
+IMPORTANT
+
+GOOD PRACTICE
+
+==================================================
+20. PRIVACY IMPROVEMENT SIMULATOR
+==================================================
+
+Create an impressive feature:
+
+“What happens if I improve my settings?”
+
+Example:
+
+CURRENT:
+
+Risk Score:
+72/100
+
+CRITICAL
+
+Changes:
+
+✓ Make phone private
+✓ Disable real-time location sharing
+✓ Enable MFA
+✓ Enable tag review
+
+NEW SIMULATED SCORE:
+
+34/100
+
+MODERATE
+
+Display:
+
+Risk Reduction:
+38 points
+
+IMPORTANT:
+
+Clearly label this as a framework simulation, not a guarantee of real-world safety.
+
+==================================================
+21. PRIVACY RADAR / CATEGORY CHART
+==================================================
+
+Create visualization showing category risks.
+
+Categories:
+
+Profile
+Personal Info
+Location
+Content
+Connections
+Tagging
+Account Security
+Third-Party Apps
+Social Engineering
+Digital Footprint
+
+Create:
+
+Bar chart or radar chart.
+
+Higher value = higher risk.
+
+==================================================
+22. DASHBOARD
+==================================================
+
+Create professional Cybersecurity Privacy Dashboard.
+
+TOP CARDS:
+
+Overall Risk Score
+
+Risk Level
+
+High-Risk Categories
+
+Recommendations
+
+Security Controls Enabled
+
+Charts:
+
+1. Category Risk Scores
+2. Privacy Risk Distribution
+3. Top Privacy Weaknesses
+4. Account Security Controls
+5. Digital Footprint Risk
+6. Privacy Improvement Comparison
+
+Include:
+
+“Start Privacy Assessment”
+
+button.
+
+==================================================
+23. PRIVACY REPORT
+==================================================
+
+Generate a professional assessment report.
+
+Include:
+
+Assessment ID
+
+Assessment Date
+
+Overall Risk
+
+Risk Level
+
+Category Scores
+
+Top Findings
+
+Security Recommendations
+
+Priority Actions
+
+Privacy Checklist
+
+Disclaimer
+
+IMPORTANT:
+
+Do NOT include sensitive information.
+
+Allow export to:
+
+PDF or HTML
+
+==================================================
+24. SAFE DATA STORAGE
+==================================================
+
+Design privacy-first storage.
+
+Store only:
+
+assessment_id
+category_scores
+overall_score
+risk_level
+finding_types
+created_at
+
+Avoid storing:
+
+phone number
+email address
+home address
+birth date
+password
+exact location
+private messages
+
+Explain:
+
+Data Minimization
+
+Purpose Limitation
+
+Privacy by Design
+
+==================================================
+25. DATABASE DESIGN
+==================================================
+
+Create:
+
+ASSESSMENTS
+
+assessment_id
+overall_score
+risk_level
+created_at
+
+CATEGORY_SCORES
+
+category_score_id
+assessment_id
+category
+score
+
+FINDINGS
+
+finding_id
+assessment_id
+category
+finding_type
+severity
+description
+
+RECOMMENDATIONS
+
+recommendation_id
+finding_type
+recommendation
+priority
+
+Do not create unnecessary sensitive-data columns.
+
+==================================================
+26. REST API DESIGN
+==================================================
+
+Create:
+
+POST /api/assessment
+
+GET /api/assessment/{id}
+
+GET /api/assessment/{id}/recommendations
+
+POST /api/assessment/simulate-improvement
+
+GET /api/dashboard/stats
+
+GET /api/privacy-checklist
+
+Optional:
+
+DELETE /api/assessment/{id}
+
+Explain:
+
+Method
+Request
+Response
+Validation
+Error Handling
+Authentication
+Authorization
+Privacy considerations
+
+==================================================
+27. SYSTEM ARCHITECTURE
+==================================================
+
+Create:
+
+User
+↓
+Privacy Questionnaire
+↓
+Input Validation
+↓
+Feature Extraction
+↓
+┌──────────────────────────────┐
+│ Profile Risk Analyzer        │
+│ Personal Info Analyzer       │
+│ Location Analyzer            │
+│ Content Analyzer             │
+│ Account Security Analyzer    │
+│ Social Engineering Analyzer  │
+│ Digital Footprint Analyzer   │
+└──────────────────────────────┘
+↓
+Category Scores
+↓
+Risk Scoring Engine
+↓
+Overall Risk
+↓
+Findings Engine
+↓
+Recommendation Engine
+↓
+Privacy Dashboard
+↓
+Privacy Report
+
+Optional anonymized aggregates
+↓
+Analytics Database
+
+==================================================
+28. TECHNOLOGY STACK
+==================================================
+
+OPTION A – BEGINNER
+
+Frontend:
+HTML
+CSS
+JavaScript
+
+Backend:
+Python Flask
+
+Database:
+SQLite
+
+Charts:
+Chart.js
+
+Reports:
+HTML/PDF
+
+OPTION B – MODERN
+
+Frontend:
+React
+
+Backend:
+FastAPI
+
+Database:
+PostgreSQL / SQLite
+
+Charts:
+Recharts / Chart.js
+
+Explain advantages and limitations.
+
+Recommend a student-friendly stack.
+
+==================================================
+29. PROJECT FOLDER STRUCTURE
+==================================================
+
+Create:
+
+Social-Media-Privacy-Risk-Assessment/
+
+│
+├── backend/
+│   ├── app.py
+│   ├── routes/
+│   ├── models/
+│   ├── services/
+│   │   ├── assessment_engine.py
+│   │   ├── scoring_engine.py
+│   │   ├── findings_engine.py
+│   │   ├── recommendation_engine.py
+│   │   └── improvement_simulator.py
+│   └── utils/
+│
+├── frontend/
+│   ├── index.html
+│   ├── assessment.html
+│   ├── dashboard.html
+│   ├── css/
+│   └── js/
+│
+├── data/
+│   ├── generate_dataset.py
+│   └── social_media_privacy_assessments.csv
+│
+├── reports/
+├── tests/
+├── screenshots/
+├── docs/
+├── README.md
+├── requirements.txt
+├── .env.example
+└── .gitignore
+
+Explain every folder.
+
+==================================================
+30. COMPLETE SOURCE CODE
+==================================================
+
+Now provide COMPLETE SOURCE CODE.
+
+Do NOT provide only snippets.
+
+For every file provide:
+
+FILE NAME:
+FILE PATH:
+PURPOSE:
+COMPLETE CODE:
+
+Include:
+
+- 40+ question privacy questionnaire
+- input validation
+- synthetic dataset generator
+- feature extraction
+- category scoring
+- overall scoring
+- findings engine
+- recommendation engine
+- improvement simulator
+- dashboard
+- charts
+- privacy report
+- database
+- backend APIs
+- frontend
+- tests
+- requirements.txt
+- .env.example
+- .gitignore
+
+Code must be:
+
+- modular
+- clean
+- commented
+- executable
+- beginner-friendly
+- privacy-preserving
+- defensive
+- industry-style
+
+==================================================
+31. LOCAL EXECUTION
+==================================================
+
+Give exact commands.
+
+STEP 1:
+Create project.
+
+STEP 2:
+Create virtual environment.
+
+STEP 3:
+Install dependencies.
+
+STEP 4:
+Generate synthetic dataset.
+
+STEP 5:
+Start backend.
+
+STEP 6:
+Start frontend.
+
+STEP 7:
+Open assessment.
+
+STEP 8:
+Complete questionnaire.
+
+STEP 9:
+Generate privacy score.
+
+STEP 10:
+View category analysis.
+
+STEP 11:
+Run improvement simulation.
+
+STEP 12:
+Generate report.
+
+==================================================
+32. SAFE DEMONSTRATION PROFILE
+==================================================
+
+Create fictional profile:
+
+Profile:
+Public
+
+Phone:
+Public
+
+Email:
+Private
+
+Full Birthday:
+Public
+
+Location:
+Public
+
+Real-Time Check-ins:
+Yes
+
+Travel Plans:
+Public
+
+Unknown Requests:
+Often Accepted
+
+Tag Review:
+Disabled
+
+MFA:
+Disabled
+
+Login Alerts:
+Disabled
+
+Third-Party Apps:
+Not Reviewed
+
+Old Posts:
+Not Reviewed
+
+Run assessment.
+
+Show:
+
+Overall Risk Score
+
+Category Scores
+
+Top Findings
+
+Recommendations
+
+Then simulate:
+
+Phone → Private
+
+Birthday → Private
+
+Location → Private
+
+Travel Plans → Private
+
+Unknown Requests → Reject/Verify
+
+Tag Review → Enabled
+
+MFA → Enabled
+
+Login Alerts → Enabled
+
+Third-Party Apps → Reviewed
+
+Show risk reduction.
+
+==================================================
+33. TESTING STRATEGY
+==================================================
+
+Create at least 30 tests:
+
+1. Fully private profile
+2. Fully public synthetic profile
+3. Public phone
+4. Public email
+5. Public birthday
+6. Public location
+7. Real-time check-ins
+8. Travel plans
+9. Workplace exposure
+10. Education exposure
+11. Public posts
+12. Unknown connections
+13. Tag review disabled
+14. MFA disabled
+15. Login alerts disabled
+16. Password reuse reported
+17. Third-party apps not reviewed
+18. Suspicious-link awareness low
+19. Old posts not reviewed
+20. Privacy settings not reviewed
+21. Category score calculation
+22. Overall score calculation
+23. Score boundary 20
+24. Score boundary 40
+25. Score boundary 70
+26. Recommendation generation
+27. Improvement simulation
+28. Database save
+29. Sensitive data not stored
+30. Report generation
+
+For each provide:
+
+Test ID
+Scenario
+Input
+Expected Result
+Actual Result
+Pass/Fail
+
+Provide automated tests.
+
+==================================================
+34. SECURITY & PRIVACY TESTING
+==================================================
+
+Verify application does NOT unnecessarily store:
+
+- Phone numbers
+- Personal email addresses
+- Home addresses
+- Birth dates
+- Passwords
+- Exact locations
+- Private messages
+
+Verify:
+
+- Input validation
+- XSS protection
+- API rate limiting
+- Authentication if accounts are implemented
+- Secure session handling
+- Environment variables
+- Safe report generation
+- Data deletion
+
+Explain every test.
+
+==================================================
+35. THREAT MODEL
+==================================================
+
+Create a basic threat model for a fictional social-media user.
+
+Assets:
+
+Account
+
+Identity information
+
+Contact information
+
+Location privacy
+
+Private content
+
+Social relationships
+
+Threats:
+
+Account takeover
+
+Impersonation
+
+Phishing
+
+Social engineering
+
+Unwanted profiling
+
+Oversharing
+
+Third-party application exposure
+
+For each:
+
+Asset
+Threat
+Exposure
+Potential Impact
+Existing Control
+Recommended Control
+
+Keep analysis defensive.
+
+==================================================
+36. PRIVACY RISK MATRIX
+==================================================
+
+Create:
+
+Likelihood:
+LOW / MEDIUM / HIGH
+
+Impact:
+LOW / MEDIUM / HIGH
+
+Example:
+
+Public Phone Number
+Likelihood: Medium
+Impact: Medium
+
+Real-Time Location Exposure
+Likelihood: Medium
+Impact: High
+
+MFA Disabled
+Likelihood: Medium
+Impact: High
+
+Explain that actual risk depends on context.
+
+==================================================
+37. SOCIAL ENGINEERING AWARENESS
+==================================================
+
+Create educational section:
+
+“How Oversharing Can Increase Social-Engineering Risk”
+
+Explain conceptually how attackers may exploit publicly available context to
+make scams more believable.
+
+Examples of information categories:
+
+Employer
+
+College
+
+Travel plans
+
+Family references
+
+Interests
+
+Public events
+
+Do NOT create personalized attack messages.
+
+Focus on defensive awareness.
+
+==================================================
+38. PRIVACY CHECKLIST
+==================================================
+
+Generate:
+
+SOCIAL MEDIA PRIVACY CHECKLIST
+
+□ Review profile visibility
+□ Hide unnecessary contact information
+□ Review birth-date visibility
+□ Review location sharing
+□ Avoid unnecessary real-time location posts
+□ Review tagging permissions
+□ Review followers/friends
+□ Verify unfamiliar requests
+□ Enable MFA
+□ Enable login alerts where available
+□ Review active sessions
+□ Review connected apps
+□ Remove unused integrations
+□ Review old public posts
+□ Review photo privacy
+□ Be cautious with unexpected links
+□ Never share verification codes
+□ Review privacy settings periodically
+
+Make checklist downloadable/printable.
+
+==================================================
+39. PRIVACY BY DESIGN
+==================================================
+
+Explain how the project itself follows:
+
+Data Minimization
+
+Purpose Limitation
+
+Least Privilege
+
+Privacy by Default
+
+Transparency
+
+User Control
+
+Retention Limitation
+
+Secure Processing
+
+Explain each using this application.
+
+==================================================
+40. GITHUB UPLOAD STRATEGY
+==================================================
+
+Repository Name:
+
+Social-Media-Privacy-Risk-Assessment
+
+Repository Description:
+
+“Privacy-focused cybersecurity framework for assessing social-media exposure, account-security practices, social-engineering risk, digital-footprint risk, and personalized privacy improvements using synthetic/self-reported data.”
+
+GitHub Topics:
+
+cybersecurity
+privacy
+social-media-privacy
+privacy-risk
+security-awareness
+python
+flask
+fastapi
+digital-footprint
+risk-assessment
+grc
+privacy-by-design
+defensive-security
+
+Provide exact Git commands:
+
+git init
+git add .
+git commit -m "Initialize social media privacy risk assessment"
+
+git branch -M main
+
+git remote add origin <repository-url>
+
+git push -u origin main
+
+Recommended commits:
+
+"Create privacy assessment architecture"
+
+"Add privacy questionnaire"
+
+"Generate synthetic assessment dataset"
+
+"Implement privacy feature extraction"
+
+"Add category risk scoring"
+
+"Implement overall privacy risk engine"
+
+"Add privacy findings engine"
+
+"Implement recommendation engine"
+
+"Build privacy improvement simulator"
+
+"Create privacy analytics dashboard"
+
+"Add privacy assessment report"
+
+"Implement privacy-by-design controls"
+
+"Add automated privacy tests"
+
+"Complete README and documentation"
+
+==================================================
+41. README GENERATION
+==================================================
+
+Generate:
+
+# Social Media Privacy Risk Assessment Framework
+
+## Overview
+
+## Problem Statement
+
+## Objectives
+
+## Cybersecurity Relevance
+
+## Privacy vs Security
+
+## Features
+
+## Architecture
+
+## Technology Stack
+
+## Privacy Questionnaire
+
+## Risk Categories
+
+## Risk Scoring
+
+## Privacy Findings
+
+## Recommendation Engine
+
+## Improvement Simulator
+
+## Digital Footprint
+
+## Social Engineering Awareness
+
+## Account Security
+
+## Privacy Dashboard
+
+## Privacy Report
+
+## Privacy by Design
+
+## Installation
+
+## Usage
+
+## API Documentation
+
+## Testing
+
+## Security & Privacy Testing
+
+## Results
+
+## Limitations
+
+## Future Improvements
+
+## Screenshots
+
+## Learning Outcomes
+
+## Ethical Disclaimer
+
+## Author
+
+Include:
+
+“This project is designed for defensive cybersecurity and privacy education.
+It uses synthetic or voluntarily provided assessment responses and does not
+scrape, track, or profile real social-media users.”
+
+==================================================
+42. SCREENSHOT / PROOF CHECKLIST
+==================================================
+
+Capture:
+
+1. Project folder structure
+2. Architecture diagram
+3. Privacy assessment homepage
+4. Questionnaire
+5. Profile privacy section
+6. Personal-information section
+7. Location section
+8. Account-security section
+9. Social-engineering section
+10. Overall risk score
+11. Category scores
+12. Privacy-risk chart
+13. Top findings
+14. Recommendations
+15. Improvement simulator before
+16. Improvement simulator after
+17. Risk reduction
+18. Privacy dashboard
+19. Risk distribution
+20. Top weakness chart
+21. Privacy checklist
+22. Privacy report
+23. Synthetic dataset
+24. Automated tests
+25. Privacy/security tests
+26. Database schema
+27. GitHub commits
+28. GitHub repository
+29. README preview
+
+Provide professional filenames.
+
+==================================================
+43. PROJECT REPORT
+==================================================
+
+Generate:
+
+- Abstract
+- Introduction
+- Problem Statement
+- Objectives
+- Social Media Privacy Background
+- Digital Footprint
+- Privacy vs Security
+- Social Engineering
+- Existing Approaches
+- Proposed Framework
+- Architecture
+- Questionnaire Design
+- Synthetic Dataset
+- Feature Engineering
+- Category Risk Analysis
+- Risk Scoring
+- Findings Engine
+- Recommendation Engine
+- Improvement Simulator
+- Account Security
+- Third-Party Applications
+- Location Privacy
+- Digital Footprint Analysis
+- Privacy Dashboard
+- Privacy by Design
+- Testing
+- Security Testing
+- Results
+- Limitations
+- Future Scope
+- Conclusion
+
+==================================================
+44. RESUME / LINKEDIN PROOF
+==================================================
+
+Generate:
+
+A. 3 strong resume bullet points.
+
+B. 2-line project description.
+
+C. Professional LinkedIn project description.
+
+D. Technical skills demonstrated.
+
+E. GitHub repository description.
+
+Highlight:
+
+Cybersecurity
+Privacy Risk Assessment
+Privacy by Design
+Digital Footprint Analysis
+Social Engineering Awareness
+Risk Scoring
+Python
+Data Analytics
+Security Awareness
+GRC Concepts
+
+==================================================
+45. FUTURE IMPROVEMENTS
+==================================================
+
+Discuss defensive future improvements:
+
+- Platform-specific privacy checklists
+- Configurable organizational policies
+- Privacy-awareness quizzes
+- Privacy maturity scoring
+- Family/teen safety education modules
+- Enterprise employee privacy training
+- GRC reporting
+- Anonymous organizational trend analysis
+- Better risk-model calibration
+- Localization
+- Accessibility
+- Privacy report comparison over time
+- Secure client-side assessment
+- Optional local-only mode
+
+Do not add invasive monitoring or scraping.
+
+==================================================
+46. INTERVIEW PREPARATION
+==================================================
+
+Generate exactly:
+
+10 predicted interview questions
++
+10 strong answers.
+
+The FIRST question must be:
+
+“Explain your project.”
+
+Questions should test:
+
+- Project understanding
+- Privacy vs security
+- Digital footprint
+- Social engineering
+- Privacy-risk scoring
+- Data minimization
+- MFA
+- Third-party applications
+- Privacy by Design
+- Testing
+
+Answers should sound like a student who genuinely implemented,
+tested, documented, and understood the project.
+
+FINAL RULES:
+
+- Do not scrape social-media accounts.
+- Do not access private profiles.
+- Do not track real users.
+- Do not collect unnecessary PII.
+- Do not request actual phone numbers or addresses.
+- Do not request passwords.
+- Do not perform account enumeration.
+- Use synthetic/self-reported data only.
+- Keep the project defensive.
+- Do not skip complete source code.
+- Do not skip the 40+ question assessment.
+- Do not skip category scoring.
+- Do not skip overall risk scoring.
+- Do not skip personalized recommendations.
+- Do not skip improvement simulation.
+- Do not skip privacy-by-design controls.
+- Do not skip testing.
+- Do not skip GitHub documentation.
+- Make everything executable.
+- Make it beginner-friendly.
+- Make it industry-oriented.
+- Make it GitHub-ready.
+- Make it placement-ready.
+
+
+Step-by-Step Implementation
+Step 1 — Scope, Threat Model & Architecture
+
+What are we doing?
+Defining a framework that analyzes public profile data across platforms (X, Instagram, LinkedIn, Facebook, TikTok, GitHub), flags risky content/settings, assigns a score, and outputs step-by-step fixes and awareness tips.
+
+Why are we doing it?
+Profiles leak PII (emails, phone numbers, DOB), location trails (EXIF/geotags), routine patterns, and children’s images—fuel for scams and targeted attacks. A repeatable assessment makes privacy hygiene practical.
+
+How do we execute this?
+
+Inputs: exported JSON/CSV (safe demo), or a scraper proxy (for class, we use files).
+
+Risk Engine: rule-based checks + lightweight NLP/vision (regex, keyword lists, optional OpenCV).
+
+Scoring: weighted rubric → 0–100 (higher = more risk).
+
+Outputs: risk items, remediation checklist, awareness micro-lessons.
+
+Stack: Python 3.10, FastAPI, SQLite/Postgres, React/Vite, optional OpenCV for face detection; no live scraping required for demo.
+
+ChatGPT regeneration prompt
+“Draft a privacy risk assessment architecture for social profiles with file inputs, rule-based/NLP checks, scoring, FastAPI, and a React dashboard.”
+
+Step 2 — Data Contract & Sample Inputs
+
+What are we doing?
+Creating a common schema for posts and profile metadata regardless of platform.
+
+Why are we doing it?
+Unifies analysis and simplifies feature development.
+
+How do we execute this?
+
+profile.json
+
+{
+  "platform": "instagram",
+  "username": "jane.doe",
+  "display_name": "Jane Doe",
+  "bio": "Product @ ACME • runner • mom • janedoe@example.com",
+  "website": "https://myportfolio.com",
+  "email": "janedoe@example.com",
+  "phone": "+1 415 555 1212",
+  "location": "Bengaluru, India",
+  "privacy": {"account_private": false, "show_activity": true, "allow_message_requests": true},
+  "links": ["https://linktr.ee/jane", "https://github.com/janedoe"]
+}
+
+
+posts.json
+
+[
+  {"id":"p1","text":"Daily 7am run at Cubbon Park!", "created_at":"2025-07-11T01:30:00Z","hashtags":["#5k"],"mentions":[],"geo":{"lat":12.97,"lon":77.59},"media":{"type":"image","has_faces":true,"is_child_present":true,"exif":{"make":"Apple","model":"iPhone 14","created_local":"2025-07-11 07:01"}}},
+  {"id":"p2","text":"New badge pickup at ACME HQ, 3rd floor", "created_at":"2025-07-12T12:00:00Z","hashtags":["#work"],"mentions":["@acme"],"geo":null,"media":{"type":"none"}}
+]
+
+
+ChatGPT regeneration prompt
+“Provide minimal JSON schemas for profile metadata and posts (text, geo, media flags) to drive a privacy risk scanner.”
+
+Step 3 — Risk Rubric & Weights
+
+What are we doing?
+Defining risk categories and their weights for a normalized 0–100 score.
+
+Why are we doing it?
+Transparent, explainable scoring guides consistent coaching and tracking.
+
+How do we execute this?
+
+Categories & max points
+
+PII Exposure (email/phone/DOB/address): 25
+
+Geolocation/EXIF leakage & routine trails: 20
+
+Children/minors in media (public accounts): 15
+
+Workplace/school disclosures (badging, room numbers): 10
+
+Weak privacy settings (public DM, activity status on): 10
+
+Linkage risks (Link-in-bio to oversharing docs, GitHub secrets): 10
+
+Reuse/handle correlation (same handle across sites): 5
+
+Third-party trackers in linked sites (basic check): 5
+
+Map item findings → contributions capped per category. Final score = min(100, sum).
+
+ChatGPT regeneration prompt
+“Draft a 0–100 privacy risk rubric with weighted categories for social profiles.”
+
+Step 4 — Python Risk Engine (Rules + NLP snippets)
+
+What are we doing?
+Implementing the analyzer that loads profile/posts JSON, evaluates rules, and returns findings + score + fixes.
+
+Why are we doing it?
+Fast, transparent baseline before any advanced ML.
+
+How do we execute this?
+
+# risk_engine.py
+import re, json, math, pathlib
+from datetime import datetime
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+PHONE_RE = re.compile(r"(\+?\d[\s-]?){9,}")
+WORKWORDS = {"badge","id card","hq","office","3rd floor","desk","shift"}
+CHILD_HINTS = {"my kid","my child","daughter","son","#kids","#school"}
+ROUTINE_HINTS = {"every day","daily","7am run","commute","school drop"}
+
+WEIGHTS = {"pii":25,"geo":20,"child":15,"work":10,"privacy":10,"link":10,"handle":5,"tracker":5}
+
+def load_json(path): return json.loads(pathlib.Path(path).read_text(encoding="utf-8"))
+
+def score_profile(profile, posts):
+    findings, score = [], 0
+
+    # PII Exposure
+    text_fields = " ".join([profile.get("bio",""), profile.get("email","") or "", profile.get("phone","") or ""])
+    pii_points = 0
+    if EMAIL_RE.search(text_fields): 
+        findings.append({"cat":"PII","item":"Email visible in bio/profile","fix":"Remove email; use contact form or masked address."})
+        pii_points += 10
+    if PHONE_RE.search(text_fields):
+        findings.append({"cat":"PII","item":"Phone number publicly visible","fix":"Remove phone; switch to business contact options."})
+        pii_points += 10
+    if profile.get("location"):
+        findings.append({"cat":"PII","item":"Home city visible","fix":"Remove precise location; keep region-level only."})
+        pii_points += 5
+    score += min(WEIGHTS["pii"], pii_points)
+
+    # Geolocation / Routine
+    geo_points = 0
+    for p in posts:
+        if p.get("geo"):
+            geo_points += 4
+            findings.append({"cat":"GEO","item":f"Geotagged post {p['id']}", "fix":"Disable geotagging; remove past geo from sensitive posts."})
+        if p.get("media",{}).get("exif",{}).get("created_local"):
+            geo_points += 2
+            findings.append({"cat":"GEO","item":f"EXIF timestamp leak in {p['id']}", "fix":"Strip EXIF before uploading."})
+        t = (p.get("text") or "").lower()
+        if any(h in t for h in ROUTINE_HINTS):
+            geo_points += 2
+            findings.append({"cat":"GEO","item":f"Routine disclosed in {p['id']}", "fix":"Avoid recurring time/place patterns in posts."})
+    score += min(WEIGHTS["geo"], geo_points)
+
+    # Children / Minors
+    child_points = 0
+    for p in posts:
+        if p.get("media",{}).get("is_child_present"):
+            child_points += 8
+            findings.append({"cat":"CHILD","item":f"Child appears in post {p['id']} (public)","fix":"Make account private or remove/blur child faces."})
+        t = (p.get("text") or "").lower()
+        if any(h in t for h in CHILD_HINTS): 
+            child_points += 2
+    score += min(WEIGHTS["child"], child_points)
+
+    # Workplace / School leaks
+    work_points = 0
+    for p in posts:
+        t = (p.get("text") or "").lower()
+        if any(w in t for w in WORKWORDS):
+            work_points += 5
+            findings.append({"cat":"WORK","item":f"Workplace detail in {p['id']}","fix":"Avoid badge/entry details; post generic work updates."})
+    score += min(WEIGHTS["work"], work_points)
+
+    # Privacy settings
+    priv = profile.get("privacy",{})
+    priv_points = 0
+    if not priv.get("account_private", False):
+        priv_points += 6; findings.append({"cat":"PRIV","item":"Account is public","fix":"Set account to private or limit story/audience."})
+    if priv.get("show_activity", False):
+        priv_points += 2; findings.append({"cat":"PRIV","item":"Activity status visible","fix":"Turn off activity/last-seen indicators."})
+    if priv.get("allow_message_requests", True):
+        priv_points += 2; findings.append({"cat":"PRIV","item":"Open message requests","fix":"Restrict who can message you."})
+    score += min(WEIGHTS["privacy"], priv_points)
+
+    # Linkage risks
+    link_points = 0
+    for url in profile.get("links", []):
+        if "linktr.ee" in url or "pastebin" in url:
+            link_points += 5
+            findings.append({"cat":"LINK","item":f"Aggregator in bio: {url}","fix":"Ensure linked docs hide emails/phone; remove public spreadsheets."})
+        if "github.com" in url:
+            link_points += 3
+            findings.append({"cat":"LINK","item":"GitHub linked; check for secrets/PII","fix":"Scan repos for .env/keys; add a SECURITY.md."})
+    score += min(WEIGHTS["link"], link_points)
+
+    # Handle reuse correlation
+    handle_points = 0
+    if profile.get("username") and any(u for u in profile.get("links",[]) if profile["username"] in u):
+        handle_points += 3
+        findings.append({"cat":"HANDLE","item":"Same handle across multiple sites","fix":"Consider unique handles or privacy mode on secondary accounts."})
+    score += min(WEIGHTS["handle"], handle_points)
+
+    # Simple tracker check for website (placeholder)
+    track_points = 0
+    if "myportfolio.com" in (profile.get("website") or ""):
+        track_points += 3
+        findings.append({"cat":"TRACK","item":"Personal site may include trackers","fix":"Add a cookie banner; reduce third-party scripts."})
+    score += min(WEIGHTS["tracker"], track_points)
+
+    return {"score": min(100, score), "findings": findings}
+
+
+ChatGPT regeneration prompt
+“Write a Python risk engine that loads profile/posts JSON, applies rule checks (PII/geo/children/work/privacy/linkage), and returns a 0–100 score with fixes.”
+
+Step 5 — FastAPI Service
+
+What are we doing?
+Serving /analyze (JSON in → score out) and /upload (save & analyze) plus /stats for the dashboard.
+
+Why are we doing it?
+A simple API enables the React UI and batch analyses.
+
+How do we execute this?
+
+# app.py
+from fastapi import FastAPI, UploadFile, File
+from pydantic import BaseModel
+import json, sqlite3, time
+from risk_engine import score_profile
+
+app = FastAPI()
+db = sqlite3.connect("privacy.db", check_same_thread=False)
+db.execute("""CREATE TABLE IF NOT EXISTS assessments(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  ts INTEGER, platform TEXT, username TEXT, score INTEGER, findings TEXT
+)""")
+
+class Payload(BaseModel):
+    profile: dict
+    posts: list
+
+@app.post("/analyze")
+def analyze(payload: Payload):
+    res = score_profile(payload.profile, payload.posts)
+    db.execute("INSERT INTO assessments(ts,platform,username,score,findings) VALUES(?,?,?,?,?)",
+               (int(time.time()), payload.profile.get("platform"), payload.profile.get("username"),
+                int(res["score"]), json.dumps(res["findings"])))
+    db.commit()
+    return res
+
+@app.post("/upload")
+async def upload(profile: UploadFile = File(...), posts: UploadFile = File(...)):
+    prof = json.loads((await profile.read()).decode("utf-8"))
+    pst  = json.loads((await posts.read()).decode("utf-8"))
+    return analyze(Payload(profile=prof, posts=pst))
+
+@app.get("/stats")
+def stats():
+    cur = db.cursor()
+    cur.execute("SELECT COUNT(*), AVG(score) FROM assessments")
+    total, avg = cur.fetchone()
+    cur.execute("SELECT username, platform, score, ts FROM assessments ORDER BY id DESC LIMIT 20")
+    recent = [{"username":u,"platform":p,"score":int(s),"ts":t} for (u,p,s,t) in cur.fetchall()]
+    return {"total": int(total or 0), "avg_score": float(avg or 0), "recent": recent}
+
+
+ChatGPT regeneration prompt
+“Build a FastAPI with /analyze, /upload (two JSON files), and /stats, storing assessments in SQLite.”
+
+Step 6 — React Dashboard (Awareness + Remediation)
+
+What are we doing?
+Creating a simple dashboard to upload files, view score, top risks, and a remediation checklist.
+
+Why are we doing it?
+Visual clarity speeds behavior change and interview demos.
+
+How do we execute this?
+
+// src/App.jsx
+import { useState, useEffect } from "react";
+
+export default function App(){
+  const [score,setScore]=useState(null);
+  const [findings,setFindings]=useState([]);
+  const [stats,setStats]=useState(null);
+
+  async function onUpload(e){
+    e.preventDefault();
+    const form = new FormData(e.target);
+    const res = await fetch("/upload",{method:"POST",body:form});
+    const data = await res.json();
+    setScore(data.score); setFindings(data.findings);
+  }
+
+  useEffect(()=>{ fetch("/stats").then(r=>r.json()).then(setStats); },[]);
+
+  return (
+    <div style={{maxWidth:960, margin:"2rem auto", fontFamily:"ui-sans-serif"}}>
+      <h1>Social Media Privacy Risk Assessment</h1>
+      <form onSubmit={onUpload}>
+        <label>profile.json <input type="file" name="profile" accept=".json" required/></label>
+        <label style={{marginLeft:8}}>posts.json <input type="file" name="posts" accept=".json" required/></label>
+        <button style={{marginLeft:8}}>Analyze</button>
+      </form>
+
+      {score!==null && (
+        <div style={{marginTop:16}}>
+          <h3>Risk Score: {score} / 100</h3>
+          <div style={{height:12, background:"#eee", borderRadius:8}}>
+            <div style={{height:"100%", width:`${Math.min(score,100)}%`, background: score<40?"#2ecc71":score<70?"#f1c40f":"#e74c3c", borderRadius:8}}/>
+          </div>
+          <h3 style={{marginTop:12}}>Top Findings</h3>
+          <ul>{findings.slice(0,10).map((f,i)=><li key={i}>⚠️ <b>{f.cat}</b>: {f.item} — <i>Fix:</i> {f.fix}</li>)}</ul>
+        </div>
+      )}
+
+      {stats && (
+        <div style={{marginTop:24}}>
+          <h3>Org Snapshot</h3>
+          <p>Total assessments: {stats.total} • Avg score: {stats.avg_score.toFixed(1)}</p>
+          <h4>Recent</h4>
+          <ul>{stats.recent.map((r,i)=><li key={i}>{new Date(r.ts*1000).toLocaleString()} — {r.platform}/{r.username} → {r.score}</li>)}</ul>
+        </div>
+      )}
+
+      <div style={{marginTop:24, padding:12, border:"1px solid #ddd", borderRadius:8}}>
+        <h3>Awareness: Quick Wins</h3>
+        <ol>
+          <li>Remove email/phone from bios; use contact forms.</li>
+          <li>Disable geotagging & strip EXIF from photos.</li>
+          <li>Set accounts to private; restrict DMs; hide activity.</li>
+          <li>Avoid posting badges, school routes, or daily routines.</li>
+          <li>Blur/avoid posting children’s faces on public profiles.</li>
+        </ol>
+      </div>
+    </div>
+  );
+}
+
+
+ChatGPT regeneration prompt
+“Create a minimal React UI to upload profile/posts JSON, show score bar, list top findings with fixes, and render /stats.”
+
+Step 7 — Optional Vision Check (Faces/Children)
+
+What are we doing?
+Adding a local face detection step to augment child-presence flags for images.
+
+Why are we doing it?
+Visual cues strengthen risk detection where metadata is missing.
+
+How do we execute this?
+
+Use OpenCV Haar cascades for a local demo.
+
+Only count faces; do not store images.
+
+Treat many small faces + captions like #kids/#school as higher risk.
+
+# vision_check.py
+import cv2, numpy as np
+
+def count_faces(image_path: str) -> int:
+    img = cv2.imread(image_path)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    det = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    faces = det.detectMultiScale(gray, 1.2, 5)
+    return len(faces)
+
+
+ChatGPT regeneration prompt
+“Add a minimal OpenCV helper to count faces for local demo; integrate into risk scoring without saving images.”
+
+Step 8 — Batch CLI & Report Export
+
+What are we doing?
+Processing multiple accounts and exporting a CSV/HTML report for stakeholders.
+
+Why are we doing it?
+Supports workshops and org roll-ups.
+
+How do we execute this?
+
+# batch_assess.py
+import json, glob, csv
+from risk_engine import score_profile
+
+rows = []
+for folder in glob.glob("samples/*"):
+    prof = json.load(open(f"{folder}/profile.json","r",encoding="utf-8"))
+    posts = json.load(open(f"{folder}/posts.json","r",encoding="utf-8"))
+    res = score_profile(prof, posts)
+    rows.append({"username":prof.get("username"),"platform":prof.get("platform"),"score":res["score"],"findings_count":len(res["findings"])})
+
+with open("privacy_report.csv","w",newline="",encoding="utf-8") as f:
+    w = csv.DictWriter(f, fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
+print("Wrote privacy_report.csv")
+
+
+ChatGPT regeneration prompt
+“Write a batch script that loops through sample folders, runs the risk engine, and exports a CSV summary.”
+
+Step 9 — Evaluation & Calibration
+
+What are we doing?
+Tuning category caps/weights using a labeled benchmark (e.g., manual ratings 0–100 for 50 sample profiles).
+
+Why are we doing it?
+Reduces false alarms and aligns with human judgment.
+
+How do we execute this?
+
+Collect 50 sample assessments; record human risk ratings.
+
+Minimize mean absolute error by adjusting category caps (grid search).
+
+# calibrate.py (sketch)
+import itertools, numpy as np, pandas as pd
+from risk_engine import score_profile, WEIGHTS
+# Given dataframe with {profile_path, posts_path, human_score}
+# Try small deltas to WEIGHTS; compute MAE; pick best.
+
+
+ChatGPT regeneration prompt
+“Explain how to calibrate risk weights against human ratings and outline a simple grid search for caps.”
+
+Step 10 — Safety, Ethics & Extensions
+
+What are we doing?
+Documenting safe use and sketching advanced features.
+
+Why are we doing it?
+Privacy tools must avoid creepiness and respect consent.
+
+How do we execute this?
+
+Consent: Analyze only self-owned or authorized profiles.
+
+Storage: Don’t store raw images/text beyond session; keep only derived scores.
+
+Explainability: Every risk item must have a human-readable reason + specific fix.
+
+Extensions:
+
+Browser helper to fetch platform privacy settings (no scraping of content).
+
+Leak checks against public paste sites (hash search only).
+
+Family-safe mode: stronger weighting for child imagery.
+
+Organization policy templates (students, teachers, employees).
+
+ChatGPT regeneration prompt
+“List safe-use guidelines and two privacy-preserving extensions for the framework.”
+
+Project Facts
+
+Market Growth 📈
+Online reputation and privacy tooling is growing with employer due diligence, school safety programs, and personal brand management.
+
+Cost Savings 💰
+Prevents doxxing/social-engineering incidents, lowers HR/compliance investigations, and reduces legal exposure from oversharing.
+
+Threat Prevention ⚙️
+PII removal, geotag control, and stronger settings significantly cut targeted scams, stalking risk, and account takeover vectors.
+
+Real-World Applications 🌍
+
+Student orientation & placement readiness.
+
+Creator/SMB account hardening kits.
+
+HR onboarding checklists and policy coaching.
+
+Family safety workshops.
+
+Industry Adoption 🏭
+Cyber awareness programs pair automated footprint scans with micro-lessons; privacy-first startups offer coaching dashboards for consumers and teams.
+
+Interview Question and Answer
+-- 1. Interview Question: Explain your project.
+-- Answer:
+-- I developed a Social Media Privacy Risk Assessment Framework that evaluates
+-- a user's social-media privacy practices without scraping or accessing their
+-- actual accounts. The user completes a structured questionnaire covering
+-- profile visibility, personal-information exposure, location sharing, posts,
+-- connections, tagging, account security, third-party applications, social-
+-- engineering awareness, and digital-footprint management. The system converts
+-- these responses into category-wise risk scores and then calculates an overall
+-- privacy risk score from 0 to 100. It identifies the highest-risk areas and
+-- generates prioritized recommendations. I also implemented a privacy
+-- improvement simulator that shows how the assessed score could change if the
+-- user improves selected settings. The project follows privacy-by-design
+-- principles and uses only synthetic or voluntarily supplied assessment data.
+
+
+-- 2. Interview Question: What is the difference between privacy and security?
+-- Answer:
+-- Privacy is mainly concerned with how personal information is collected,
+-- exposed, shared, and used, while security focuses on protecting accounts,
+-- systems, and information against unauthorized access or misuse. They overlap,
+-- but they are not identical. For example, a user could have a strong password
+-- and MFA, meaning their account has useful security controls, but still keep
+-- their phone number, full birthday, posts, and location publicly visible.
+-- Therefore, good account security does not automatically mean good privacy.
+
+
+-- 3. Interview Question: What is a digital footprint?
+-- Answer:
+-- A digital footprint is the information associated with a person's activities
+-- and presence online. An active digital footprint includes information a user
+-- deliberately shares, such as posts, comments, or profile information. Other
+-- data can also be generated or collected through online interactions depending
+-- on the service. In my project, I assess only self-reported privacy practices,
+-- such as whether users review old posts, unused accounts, profile visibility,
+-- and publicly shared information. I do not track users or collect their actual
+-- online activity.
+
+
+-- 4. Interview Question: How does your privacy-risk scoring system work?
+-- Answer:
+-- I divide the assessment into categories such as personal information,
+-- location privacy, account security, connections, tagging, third-party apps,
+-- social engineering, and digital footprint. Questionnaire responses are
+-- converted into risk contributions for each category. Each category produces
+-- a score between 0 and 100, where a higher value means higher assessed risk.
+-- I then combine the category scores using configurable weights to produce the
+-- overall score. The thresholds and weights are educational assumptions, so
+-- they would need calibration before being used for professional risk decisions.
+
+
+-- 5. Interview Question: How can social-media oversharing increase
+-- cybersecurity risk?
+-- Answer:
+-- Oversharing can make more contextual information publicly available. Details
+-- about someone's employer, college, interests, travel, family references, or
+-- public events may sometimes help make fraudulent communication appear more
+-- believable. Oversharing can also increase privacy exposure even when no
+-- cyberattack occurs. My framework therefore identifies exposure categories
+-- and recommends reducing unnecessary public information while avoiding the
+-- assumption that every public detail automatically creates a security incident.
+
+
+-- 6. Interview Question: Why did you include MFA in a privacy-assessment
+-- project?
+-- Answer:
+-- Privacy and account security are connected. If an account is taken over, an
+-- unauthorized person may gain access to private messages, photos, contacts,
+-- or other non-public information. MFA adds another authentication layer and
+-- can reduce account-takeover risk in many scenarios. Therefore, I include MFA
+-- as part of the account-security category while keeping it conceptually
+-- separate from information-exposure controls such as profile visibility.
+
+
+-- 7. Interview Question: What privacy risks can third-party applications create?
+-- Answer:
+-- Users may authorize third-party applications to access parts of their social
+-- account or related information. Over time, some integrations may no longer
+-- be needed while retaining permissions. My framework therefore asks whether
+-- users periodically review connected applications and remove unnecessary
+-- access. This follows the principle of least privilege, where an application
+-- should receive only the permissions required for its legitimate purpose.
+
+
+-- 8. Interview Question: What is Privacy by Design, and how did you apply it?
+-- Answer:
+-- Privacy by Design means considering privacy throughout system design rather
+-- than adding it only after development. In my project, I apply data
+-- minimization by asking whether information is public instead of requesting
+-- the actual information. For example, I ask whether a phone number is publicly
+-- visible rather than asking the user to enter the phone number. I also avoid
+-- collecting passwords, exact locations, private messages, home addresses, and
+-- other unnecessary personal information. Assessment storage contains mainly
+-- scores, finding types, and other minimal metadata.
+
+
+-- 9. Interview Question: What is the privacy improvement simulator?
+-- Answer:
+-- The simulator lets the user see how changing specific privacy practices would
+-- affect the framework's calculated risk score. For example, a user can
+-- simulate making contact information private, disabling public real-time
+-- location sharing, enabling MFA, enabling tag review, and reviewing third-party
+-- applications. The system recalculates category scores and displays the
+-- difference between the original and simulated assessments. I clearly label
+-- this as a risk-model simulation rather than a guarantee that the user will be
+-- safe from privacy or cybersecurity incidents.
+
+
+-- 10. Interview Question: How did you make this project privacy-safe and how
+-- would you improve it?
+-- Answer:
+-- I designed the application so it does not need to scrape social-media
+-- profiles or collect unnecessary personal information. It uses synthetic or
+-- voluntarily provided questionnaire responses, and the database stores
+-- assessment scores and finding categories rather than sensitive details such
+-- as passwords, phone numbers, home addresses, or exact locations. I would
+-- improve the project by adding platform-specific privacy checklists,
+-- configurable organizational policies, privacy-awareness quizzes, better
+-- calibration of the risk model, accessibility and localization, assessment
+-- comparisons over time, and an optional client-side mode where assessment
+-- processing can remain on the user's device.

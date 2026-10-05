@@ -1,0 +1,1 @@
+- [Self-reported assessment scope](self-reported-assessment-scope.md) — keep privacy assessments questionnaire-only; never scrape, profile, or collect identifying values.

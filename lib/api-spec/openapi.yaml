@@ -10,6 +10,10 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: assessments
+    description: Privacy-preserving self-assessments
+  - name: dashboard
+    description: Synthetic aggregate awareness data
 paths:
   /healthz:
     get:
@@ -24,6 +28,129 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /assessment:
+    post:
+      operationId: createAssessment
+      tags: [assessments]
+      summary: Score a self-reported privacy assessment
+      description: Accepts questionnaire choices only. Sensitive personal details and raw profile content are not accepted.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssessmentInput"
+      responses:
+        "201":
+          description: Assessment scored and privacy-minimized summary stored
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AssessmentReport"
+        "400":
+          description: Invalid or incomplete questionnaire responses
+  /assessment/{id}:
+    get:
+      operationId: getAssessment
+      tags: [assessments]
+      summary: Retrieve a stored privacy-minimized assessment
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Assessment summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AssessmentReport"
+        "404":
+          description: Assessment not found
+    delete:
+      operationId: deleteAssessment
+      tags: [assessments]
+      summary: Delete an assessment and its derived details
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Assessment deleted
+        "404":
+          description: Assessment not found
+  /assessment/{id}/recommendations:
+    get:
+      operationId: getAssessmentRecommendations
+      tags: [assessments]
+      summary: Retrieve recommendations for an assessment
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Prioritized recommendations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Recommendation"
+  /assessment/simulate-improvement:
+    post:
+      operationId: simulateImprovement
+      tags: [assessments]
+      summary: Recalculate risk after selected privacy improvements
+      description: Returns a framework simulation; it does not predict or guarantee real-world safety.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImprovementSimulationInput"
+      responses:
+        "200":
+          description: Current and simulated scores
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SimulationResult"
+        "400":
+          description: Invalid questionnaire responses or improvements
+  /dashboard/stats:
+    get:
+      operationId: getDashboardStats
+      tags: [dashboard]
+      summary: Read aggregate synthetic demonstration statistics
+      responses:
+        "200":
+          description: Synthetic cohort metrics and chart series
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DashboardStats"
+  /privacy-checklist:
+    get:
+      operationId: getPrivacyChecklist
+      tags: [dashboard]
+      summary: Get the printable privacy checklist
+      responses:
+        "200":
+          description: Checklist actions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ChecklistItem"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +160,186 @@ components:
           type: string
       required:
         - status
+    RiskLevel:
+      type: string
+      enum: [LOW, MODERATE, HIGH, CRITICAL]
+    RiskCategory:
+      type: string
+      enum:
+        - Profile Exposure
+        - Personal Information
+        - Location Exposure
+        - Content Exposure
+        - Connection Risk
+        - Tagging Risk
+        - Account Security
+        - Third-Party Apps
+        - Social Engineering
+        - Digital Footprint
+    AssessmentInput:
+      type: object
+      required: [answers]
+      properties:
+        answers:
+          type: object
+          minProperties: 51
+          maxProperties: 51
+          additionalProperties:
+            type: string
+            maxLength: 40
+    ImprovementSimulationInput:
+      type: object
+      required: [answers, improvements]
+      properties:
+        answers:
+          type: object
+          minProperties: 51
+          maxProperties: 51
+          additionalProperties:
+            type: string
+            maxLength: 40
+        improvements:
+          type: array
+          maxItems: 51
+          items:
+            type: string
+            maxLength: 80
+    CategoryScore:
+      type: object
+      required: [category, score]
+      properties:
+        category:
+          $ref: "#/components/schemas/RiskCategory"
+        score:
+          type: integer
+          minimum: 0
+          maximum: 100
+    Finding:
+      type: object
+      required: [id, category, title, detail, severity]
+      properties:
+        id:
+          type: string
+        category:
+          $ref: "#/components/schemas/RiskCategory"
+        title:
+          type: string
+        detail:
+          type: string
+        severity:
+          $ref: "#/components/schemas/RiskLevel"
+    Recommendation:
+      type: object
+      required: [id, category, title, action, priority]
+      properties:
+        id:
+          type: string
+        category:
+          $ref: "#/components/schemas/RiskCategory"
+        title:
+          type: string
+        action:
+          type: string
+        priority:
+          type: string
+          enum: [IMMEDIATE, IMPORTANT, GOOD PRACTICE]
+    ChecklistItem:
+      type: object
+      required: [id, label, category]
+      properties:
+        id:
+          type: string
+        label:
+          type: string
+        category:
+          $ref: "#/components/schemas/RiskCategory"
+    AssessmentReport:
+      type: object
+      required: [assessmentId, assessmentDate, overallScore, riskLevel, categoryScores, findings, recommendations, securityControlsEnabled]
+      properties:
+        assessmentId:
+          type: string
+        assessmentDate:
+          type: string
+          format: date-time
+        overallScore:
+          type: integer
+          minimum: 0
+          maximum: 100
+        riskLevel:
+          $ref: "#/components/schemas/RiskLevel"
+        categoryScores:
+          type: array
+          items:
+            $ref: "#/components/schemas/CategoryScore"
+        findings:
+          type: array
+          items:
+            $ref: "#/components/schemas/Finding"
+        recommendations:
+          type: array
+          items:
+            $ref: "#/components/schemas/Recommendation"
+        securityControlsEnabled:
+          type: integer
+    SimulationResult:
+      type: object
+      required: [currentScore, currentLevel, simulatedScore, simulatedLevel, riskReduction, categoryScores]
+      properties:
+        currentScore:
+          type: integer
+        currentLevel:
+          $ref: "#/components/schemas/RiskLevel"
+        simulatedScore:
+          type: integer
+        simulatedLevel:
+          $ref: "#/components/schemas/RiskLevel"
+        riskReduction:
+          type: integer
+        categoryScores:
+          type: array
+          items:
+            $ref: "#/components/schemas/CategoryScore"
+    RiskDistribution:
+      type: object
+      required: [level, count, percent]
+      properties:
+        level:
+          $ref: "#/components/schemas/RiskLevel"
+        count:
+          type: integer
+        percent:
+          type: number
+    WeaknessCount:
+      type: object
+      required: [label, count]
+      properties:
+        label:
+          type: string
+        count:
+          type: integer
+    DashboardStats:
+      type: object
+      required: [syntheticRecords, averageScore, highRiskCategories, securityControlsEnabled, categoryScores, riskDistribution, topWeaknesses]
+      properties:
+        syntheticRecords:
+          type: integer
+        averageScore:
+          type: number
+        highRiskCategories:
+          type: integer
+        securityControlsEnabled:
+          type: number
+        categoryScores:
+          type: array
+          items:
+            $ref: "#/components/schemas/CategoryScore"
+        riskDistribution:
+          type: array
+          items:
+            $ref: "#/components/schemas/RiskDistribution"
+        topWeaknesses:
+          type: array
+          items:
+            $ref: "#/components/schemas/WeaknessCount"
 
